@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="200" height="200" src="app/src/main/res/drawable/ic_readme.png">
+  <img width="200" height="200" src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">
   <h1>Easy Food</h1>
 <p>Food Recipe app for Android.</p></div>
 
