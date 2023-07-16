@@ -9,6 +9,7 @@ import com.example.easyfood.pojo.MealByCategory
 
 class CategoryMealsAdapter :
     RecyclerView.Adapter<CategoryMealsAdapter.CategoryMealsViewHolder>() {
+    lateinit var onItemClick:((MealByCategory) -> Unit)
     private var mealsList = ArrayList<MealByCategory>()
 
     fun setMealsList(mealsList: List<MealByCategory>) {
@@ -34,5 +35,9 @@ class CategoryMealsAdapter :
         Glide.with(holder.itemView).load(mealsList[position].strMealThumb)
             .into(holder.binding.ivMealImg)
         holder.binding.tvMealTitle.text = mealsList[position].strMeal
+
+        holder.itemView.setOnClickListener {
+            onItemClick.invoke(mealsList[position])
+        }
     }
 }
